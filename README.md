@@ -15,7 +15,7 @@ $ kubectl apply -f pod.yaml
 ## Running
 
 ```
-$ kubectl cp arbitrage.pcap k8s-arbitrage:/data/ar16.pcap
+$ kubectl cp arbitrage.pcap k8s-arbitrage:/data/arXX.pcap
 $ kubectl logs k8s-arbitrage
 $ minikube ssh
 docker@minikube:~$ ls -la /data/arbitrage
