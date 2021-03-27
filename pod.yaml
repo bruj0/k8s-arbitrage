@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: k8s-arbitrage
+spec:
+  containers:
+    - name: arbitrage
+      image: k8s-arbitrage:0.3
+      volumeMounts:
+        - mountPath: "/data"
+          name: host-mount
+  volumes:
+    - name: host-mount
+      hostPath:
+        path: "/data"
