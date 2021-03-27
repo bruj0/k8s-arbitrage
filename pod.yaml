@@ -9,8 +9,8 @@ spec:
       image: k8s-arbitrage:0.3
       volumeMounts:
         - mountPath: "/data"
-          name: host-mount
+          name: data-pv
   volumes:
-    - name: host-mount
-      hostPath:
-        path: "/data"
+    - name: data-pv
+      persistentVolumeClaim:
+        claimName: data-pv

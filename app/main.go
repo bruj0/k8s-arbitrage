@@ -117,7 +117,6 @@ func handlePacket(packet gopacket.Packet) {
 	fmt.Printf("Error getting applycation layer:%s", spew.Sdump(packet))
 }
 
-// Save saves a representation of v to the file at path.
 func Save(path string, v interface{}) error {
 
 	f, err := os.Create(path)
@@ -133,9 +132,6 @@ func Save(path string, v interface{}) error {
 	return err
 }
 
-// Marshal is a function that marshals the object into an
-// io.Reader.
-// By default, it uses the JSON marshaller.
 var Marshal = func(v interface{}) (io.Reader, error) {
 	b, err := json.MarshalIndent(v, "", "\t")
 	if err != nil {
