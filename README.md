@@ -2,7 +2,7 @@
 ## Requirements
 
 * Docker
-* Miniqube
+* Minikube
 * Kubectl
 ## Installing
 ```
@@ -18,7 +18,7 @@ $ kubectl apply -f pod.yaml
 $ kubectl cp arbitrage.pcap k8s-arbitrage:/data/ar16.pcap
 $ kubectl logs k8s-arbitrage
 $ minikube ssh
-# ls -la /data/arbitrage
+docker@minikube:~$ ls -la /data/arbitrage
 ...
 -rw-r--r--. 1 docker 1000 370632 Mar 27 13:05 ar16.pcap
 -rw-r--r--. 1 root   root  42022 Mar 27 13:05 ar16.pcap1616850356618407031pod0.json
